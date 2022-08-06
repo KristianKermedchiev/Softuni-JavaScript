@@ -1,0 +1,17 @@
+function reverseAnArrayOfNum(n, number) {
+
+        let res = [];
+        let string = '';
+        let index = '';
+
+        for(let i = 0; i< n; i++){
+            res.push(number[i]);
+        }
+        
+        for(let r = res.length -1 ; r >= 0; r--){
+            
+            string += res[r] + " ";
+     
+        }
+        console.log(string)
+}
