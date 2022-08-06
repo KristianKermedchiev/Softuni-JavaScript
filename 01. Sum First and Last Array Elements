@@ -1,4 +1,4 @@
-function SumFirstAndLastArrEl (input){
+function sumFirstAndLastArrEl (input){
 
     let first = input[0];
     let second = input[input.length-1]
