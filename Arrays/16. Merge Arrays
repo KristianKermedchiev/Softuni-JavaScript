@@ -1,0 +1,18 @@
+function mergeARr (firstArr, secondArr) {
+
+    let newArray = [];
+    let inputL = firstArr.length;
+
+
+    for (let index = 0; index < inputL; index++) {
+        if (index % 2 === 0) {
+            newArray[index] = Number(firstArr[index]) + Number(secondArr[index]);
+        } else {
+            newArray[index] = firstArr[index] + secondArr[index]
+        }
+
+    }
+
+    console.log(newArray.join(' - '));
+
+}
