@@ -1,0 +1,7 @@
+function city (input) {
+
+    for (let [key, value] of Object.entries(input)) {
+
+        console.log(`${key} -> ${value}`);
+    }
+}
