@@ -1,0 +1,27 @@
+function songs (input) {
+
+    class Songs {
+        constructor(type, name, time){
+            this.type = type;
+            this.name = name;
+            this.time = time;
+        }
+    }
+
+    let songs = [];
+    let numberOfSongs = input.shift();
+    let typeOfSong = input.pop();
+
+    for (let i = 0; i < numberOfSongs; i++) {
+        let [type, name, time] = input[i].split('_');
+        let song = new Songs(type, name, time);
+        songs.push(song)
+    }
+
+    if(typeOfSong === 'all'){
+        songs.forEach((i) => console.log(i.name));
+    } else {
+        let filtered = songs.filter((i) => i.type === typeOfSong);
+        filtered.forEach((i) => console.log(i.name));
+    }
+}
