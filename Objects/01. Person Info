@@ -1,0 +1,8 @@
+function personInfo (firstName, lastName, age){
+
+    let myObj = {};
+    myObj.firstName = firstName;
+    myObj.lastName = lastName;
+    myObj.age = age;
+    return myObj;
+}
