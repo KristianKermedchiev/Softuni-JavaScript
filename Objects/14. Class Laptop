@@ -1,0 +1,31 @@
+class Laptop {
+
+    constructor(info, quality){
+        this.info = info;
+        this.quality = quality;
+        this.isOn = false;
+        //this.price = 800 - (this.info.age * 2) + (this.quality * 0.5)
+    }
+
+    //•	getter price – number (800 – {age * 2} + (quality * 0.5)) 
+    showInfo(){
+        return JSON.stringify(this.info);
+    }
+
+    turnOn(){
+        this.isOn = true;
+        this.quality--;
+       
+    }
+
+    turnOff(){
+        this.isOn = false;
+        this.quality--;
+        
+    }
+
+    get price() {
+        return 800 - (this.info.age * 2) + (this.quality * 0.5);
+    }
+
+}
