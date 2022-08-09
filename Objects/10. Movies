@@ -1,0 +1,37 @@
+function movies (input){
+
+    let newArray = [];
+
+    input.forEach(el => {
+        if(el.includes('addMovie')){
+            let movie = el.replace('addMovie ', '');
+            newArray.push({name:movie});      
+        } else if (el.includes('directedBy')){
+            let movie = el.split(' directedBy ');
+            let name = movie[0];
+            let director = movie[1];
+            // let [name, director] = el.split(' directedBy ');
+            newArray.forEach(movie => {
+                if(movie.name === name){
+                    movie.director = director;
+                }
+            })
+        } else if(el.includes('onDate')){
+            let [name, date] = el.split(' onDate ');
+            newArray.forEach(movie => {
+                if(movie.name === name){
+                    movie.date = date;
+                }
+            })
+        }
+        
+    });
+  
+    newArray.forEach(movie => {
+        if(movie.name && movie.director && movie.date){
+            console.log(JSON.stringify(movie));
+        }
+    });
+
+
+}
