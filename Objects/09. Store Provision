@@ -1,0 +1,23 @@
+function storeProvision(array1, array2) {
+
+    let array1L = array1.length;
+    let array2L = array2.length;
+    let storeProducts = {};
+    
+    for (let i = 0; i < array1L; i += 2) {
+        let product = array1[i];
+        storeProducts[product] = Number(array1[i + 1]);
+    }
+
+    for (let y = 0; y < array2L; y += 2) {
+        let product = array2[y];
+        if (!storeProducts.hasOwnProperty(product)) {
+            storeProducts[product] = 0;
+        }
+        storeProducts[product] += Number(array2[y + 1])
+    }
+
+    for (const product in storeProducts) {
+        console.log(`${product} -> ${storeProducts[product]}`);
+    }
+}
