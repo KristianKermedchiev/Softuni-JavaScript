@@ -12,5 +12,6 @@ function orders (product, count) {
     let sum = price * count;
 
     console.log(sum.toFixed(2));
-
 }
+orders("water", 5);
+orders("coffee", 2);

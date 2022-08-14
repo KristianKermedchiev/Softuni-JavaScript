@@ -4,8 +4,8 @@ function repeatString (string, repeatCount){
     
     for (let index = 1; index <= repeatCount; index++) {     
         empty+=string
-    }
-    
-    console.log(empty)
-    
+    }  
+    console.log(empty)    
 }
+repeatString("abc", 3);
+repeatString("String", 2);

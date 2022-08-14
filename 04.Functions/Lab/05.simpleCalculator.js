@@ -13,5 +13,8 @@ function simpleCalculator(a, b, operator) {
         case 'subtract': res = subtract(a, b); break;
     }
     console.log(res)
-
 }
+simpleCalculator(5, 5, 'multiply');
+simpleCalculator(40, 8, 'divide');
+simpleCalculator(12, 19, 'add');
+simpleCalculator(50, 13, 'subtract');
