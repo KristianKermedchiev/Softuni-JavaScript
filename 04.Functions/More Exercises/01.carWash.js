@@ -21,3 +21,5 @@ function carwash(array){
 
     console.log(`The car is ${sum.toFixed(2)}% clean.`);
 }
+carwash(['soap', 'soap', 'vacuum cleaner', 'mud', 'soap', 'water']);
+carwash(["soap", "water", "mud", "mud", "water", "mud", "vacuum cleaner"]);

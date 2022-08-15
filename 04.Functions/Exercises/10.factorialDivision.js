@@ -14,3 +14,5 @@ function factorialDiv (num1, num2) {
     }
     console.log((finalX/finalY).toFixed(2));
 }
+factorialDiv(5, 2);
+factorialDiv(6, 2);

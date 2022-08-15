@@ -13,3 +13,6 @@ function loadingBar (number) {
         console.log('[' + compleated + incomplete + ']');
     }
 }
+loadingBar(30);
+loadingBar(50);
+loadingBar(100);

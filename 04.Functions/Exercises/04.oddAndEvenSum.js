@@ -14,5 +14,6 @@ function oddOrEvenSum(num1) {
     }
 
     console.log(`Odd sum = ${oddSum}, Even sum = ${evenSum}`);
-    
 }
+oddOrEvenSum(1000435);
+oddOrEvenSum(3495892137259234);

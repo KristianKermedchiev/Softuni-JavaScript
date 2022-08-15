@@ -1,4 +1,4 @@
-function NxNMatrix (times){
+function nxnMatrix (times){
     let matrix = [];
 
     for(let i = 0; i < times; i++){
@@ -14,3 +14,6 @@ function NxNMatrix (times){
 
     console.log(matrix.join('\n'));
 }
+nxnMatrix(3);
+nxnMatrix(7);
+nxnMatrix(2);
