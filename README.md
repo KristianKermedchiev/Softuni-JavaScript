@@ -6,22 +6,22 @@ Softuni JavaScript Fundamentals Module - 16MAY2022 - 7AUG2022.
 
 In this course we covered the following topics:
 
-Basic Syntax, Conditional Statements and Loops
+- Basic Syntax, Conditional Statements and Loops
 
-Data Types and Variables
+- Data Types and Variables
 
-Arrays
+- Arrays
 
-Functions
+- Functions
 
-Arrays Advanced
+- Arrays Advanced
 
-Objects and Classes
+- Objects and Classes
 
-Associative Arrays
+- Associative Arrays
 
-Text Processing
+- Text Processing
 
-Regular Expressions
+- Regular Expressions
 
 More information about each topic will be present in its respective folder.
