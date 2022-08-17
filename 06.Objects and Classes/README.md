@@ -1,27 +1,13 @@
 # Softuni
 
-Softuni courses and homeworks.
+In this lecture we covered the following topics:
 
-Softuni JavaScript Fundamentals Module - 16MAY2022 - 7AUG2022.
+Objects and Classes
 
-In this course we covered the following topics:
+• Objects (definition, properties and methods);
 
-- Basic Syntax, Conditional Statements and Loops
+• Reference vs. Value Types;
 
-- Data Types and Variables
+• JSON;
 
-- Arrays
-
-- Functions
-
-- Arrays Advanced
-
-- Objects and Classes
-
-- Associative Arrays
-
-- Text Processing
-
-- Regular Expressions
-
-More information about each topic will be present in its respective folder.
+• Classes.

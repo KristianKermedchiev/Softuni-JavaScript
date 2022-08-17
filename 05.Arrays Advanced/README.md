@@ -2,12 +2,10 @@
 
 In this lecture we covered the following topics:
 
-Objects and Classes
+Arrays Advanced
 
-• Objects (definition, properties and methods);
+• Array Functionality;
 
-• Reference vs. Value Types;
+• Array Operations (push, pop, shift, unshift, filtering and transforming elements);
 
-• JSON;
-
-• Classes.
+• Sorting Arrays.
