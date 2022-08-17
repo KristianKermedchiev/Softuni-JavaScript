@@ -7,3 +7,5 @@ function converToObject (jsonData){
     }
 
 }
+converToObject('{"name": "George", "age": 40, "town": "Sofia"}');
+converToObject('{"name": "Peter", "age": 35, "town": "Plovdiv"}');

@@ -25,3 +25,5 @@ function cats(input) {
     }
 
 }
+cats(['Mellow 2', 'Tom 5']);
+cats(['Candy 1', 'Poppy 3', 'Nyx 2']);

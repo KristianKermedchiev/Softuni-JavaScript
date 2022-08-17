@@ -1,4 +1,4 @@
-function personInfo (firstName, lastName, age){
+function personalInfo (firstName, lastName, age){
 
     let myObj = {};
     myObj.firstName = firstName;
@@ -6,3 +6,5 @@ function personInfo (firstName, lastName, age){
     myObj.age = age;
     return myObj;
 }
+personalInfo("Peter", "Pan", "20");
+personalInfo("George", "Smith", "18");
