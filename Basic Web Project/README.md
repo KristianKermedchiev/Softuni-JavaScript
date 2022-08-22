@@ -6,22 +6,12 @@ Softuni JavaScript Fundamentals Module - 16MAY2022 - 7AUG2022.
 
 In this course we covered the following topics:
 
-- Basic Syntax, Conditional Statements and Loops
+• Node Modules (HTTP, Creating simple HTTP Server);
 
-- Data Types and Variables
+• Express.js Framework;
 
-- Arrays
+• MVC;
 
-- Functions
+• MVC with Node, Express.js, Handlebars.
 
-- Arrays Advanced
-
-- Objects and Classes
-
-- Associative Arrays
-
-- Text Processing
-
-- Regular Expressions
-
-More information about each topic will be present in its respective folder.
+We were shown how to create a basic website that stores user data - Names and telephone number.
