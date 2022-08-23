@@ -2,26 +2,10 @@
 
 Softuni courses and homeworks.
 
+In this repository I will upload my homeworks from Softuni's courses.
+
 Softuni JavaScript Fundamentals Module - 16MAY2022 - 7AUG2022.
 
-In this course we covered the following topics:
+Softuni HTML & CSS mini course - 18AUG2022 - 23AUG2022.
 
-- Basic Syntax, Conditional Statements and Loops
-
-- Data Types and Variables
-
-- Arrays
-
-- Functions
-
-- Arrays Advanced
-
-- Objects and Classes
-
-- Associative Arrays
-
-- Text Processing
-
-- Regular Expressions
-
-More information about each topic will be present in its respective folder.
+More information about each topic course will be present in its respective folder.
