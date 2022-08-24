@@ -1,0 +1,36 @@
+body {
+ margin: 0 auto; 
+}
+
+nav {
+    margin: 0%;
+    background-color: #D3D3D3;
+    text-align: center;
+}
+
+nav ul {
+    margin-top: 0%;
+}
+
+nav ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+nav ul li button {
+    padding: 10px;
+    font-family: Helvetica, sans-serif;
+    font-size: medium;
+    color: #009900;
+    background: none;
+    border: none;
+    text-decoration: none;
+}
+
+nav ul li button:hover {
+    color: #FEFEF9;
+    background: #009900;
+    padding: 3px 10px 3px 10px;
+    border-radius: 4px;
+    text-align: center;
+}

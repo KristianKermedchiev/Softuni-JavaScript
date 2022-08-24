@@ -1,0 +1,79 @@
+<!-- # 05 - Table
+------
+Problems for homework for the [“HTML and CSS Basics”](#) course @ **SoftUni**.
+
+Submit your solutions in the [SoftUni Judge System](https://judge.softuni.bg/Contests/#!/List/ByCategory/165/HTML-and-CSS)
+
+## Constraints
+* Change the document **title**
+* Use **h2** tag for the title
+* Use **table**, **thead**, **tbody** and **tfoot** tags to create the **table**
+
+## Hints
+* You can add the **style.css** file from resources for better looking table -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>Daily Steps</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Distance</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>Suzie Q.</td>
+            <td>134</td>
+            <td>0.5 m</td>
+            <td>67.0 m</td>
+        </tr>
+        <tr>
+            <td>Jim D.</td>
+            <td>121</td>
+            <td>0.8 m</td>
+            <td>96.8 m</td>
+        </tr>
+        <tr>
+            <td>John P.</td>
+            <td colspan="3", id="four">Absent</td>
+            
+        </tr>
+        <tr>
+            <td>Frank L.</td>
+            <td>218</td>
+            <td>0.6 m</td>
+            <td>130.8 m</td>
+        </tr>
+        <tr>
+            <td>Sally B.</td>
+            <td>243</td>
+            <td rowspan="2"> 0.4</td>
+            <td>97.2 m</td>
+        </tr>
+        <tr>
+            <td>Susan F.</td>
+            <td>350</td>
+            
+            <td>140.0 m</td>
+        </tr>
+        <tr id="foot">
+            <td colspan="3">Group Total:</td>
+            <td>391.8 m</td>
+        </tr>
+    </table>
+</body>
+
+</html>

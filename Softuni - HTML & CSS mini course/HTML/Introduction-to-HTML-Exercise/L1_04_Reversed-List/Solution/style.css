@@ -1,0 +1,12 @@
+body {
+    background-color: gray;
+}
+
+li {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+h3{
+    padding-left: 6rem;
+}
