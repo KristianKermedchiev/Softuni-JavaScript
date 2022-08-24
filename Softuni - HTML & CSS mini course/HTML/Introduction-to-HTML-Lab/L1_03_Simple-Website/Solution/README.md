@@ -1,11 +1,3 @@
 # Softuni
 
-Softuni courses and homeworks.
-
-In this repository I will upload my homeworks from Softuni's courses.
-
-Softuni JavaScript Fundamentals Module - 16MAY2022 - 7AUG2022.
-
-Softuni HTML & CSS mini course - 18AUG2022 - 23AUG2022.
-
-More information about each topic course will be present in its respective folder.
+![image](https://user-images.githubusercontent.com/106478447/186513191-9394535c-5e9b-4f0b-810c-01fd7a1105c2.png)
