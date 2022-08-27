@@ -1,0 +1,258 @@
+<!-- # 01 - KidsCorner
+------
+Problems for homework for the [“HTML and CSS Basics”](#) course @ **SoftUni**.
+
+## Constraints
+* Change the document **title** to *"KidsCornes"*
+* Use **"PT Sans", sans-serif** font family for the document
+* Divide your content into **header**, **main** and **footer** tags
+    * Use **#50b9e1** as the primary color on the page     
+* Use **nav**, **ul**, **li** and **a** tags to create the navigation
+    * Set the list items **display** property to **inline-block**
+	* Remove the **text decoration** and make a **hover** effect to the hyperlinks  
+* The section with children picture must have
+    * Add **color gradient** to the first section - *You can use [online generator](https://mycolor.space/gradient)*
+    * The section title **font size** must be **66px**
+    * The button should have the following properties:
+        * Font size - **26px**
+        * Background - **transparent**
+        * Border width - **2px**
+        * Border color - **white**
+        * Border style - **solid**
+        * Hover effect *(look at the screenshots)*
+* Use **section** tag to create three **sections** inside the main
+* Use **h2** tag for the section headings
+    * Font family - **"PT Serif"**
+    * Font size - **32px**
+    * Font style - **italic**
+    * Letter spacing - **2px**
+* The first section with title *"Welcome to Kids Corner"* should have the following properties:
+	* Width - **60%** 
+	* **Centered** text
+	* Text color - **#5a7c8a**
+* The second section with title *"Our offerings"*:
+    * List items **display** property - **inline-block** 
+	* Text color - **white**
+	* Font family - **"PT Serif", serif**
+* Third section with title *"Upcoming Camps"*:
+    * List items **display** property - **inline-block** 
+    * Text color - **#5a7c8a**
+    * The buttons should have:
+        * Font size - **18px**
+        * Background - **transparent**
+        * Font color - **#43bae3**
+        * Border width - **2px**
+        * Border color - **#43bae3**
+        * Border style - **solid**
+        * Hover effect *(look at the screenshots)*
+* The **footer** should have the following properties:
+    * Font size - **16px**
+    * Font color - **#5a7c8a**
+    * Background color - **#43bae3**    
+
+## Hints
+* You can use [Font Awesome](https://fontawesome.com/) for icons -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidsCorner</title>
+    <script src="https://kit.fontawesome.com/1d7be3f561.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <section class="navigation">
+            <p>kids<span>c<i class="fa-solid fa-futbol"></i>rner</span></p>
+            <nav>
+                <ul>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">OFFERINGS</a></li>
+                    <li><a href="#">CAMPS</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="site-header">
+
+            <h1>a comfort corner for you child</h1>
+            <button>LEARN MORE</button>
+        </section>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+
+            <h2>Welcome to Kids Corner</h2>
+
+            <p>The Heart’s Kids Club provides lots of fun activities with an educational twist. Kids can join for free
+                and will receive a goody bag and a membership card on induction. Each workshop will be interactive,
+                educational, and will introduce children to important concepts that they will really enjoy. Children
+                must be accompanied by a responsible adult at all times and workshop places are available on a first
+                come, first served basis. </p>
+
+            <p>If you are parent looking for a place where your child will grow the best, look further, talk to us now.
+            </p>
+
+
+        </section>
+
+        <section class="offers">
+
+            <h2>Our orfferings</h2>
+            <ul>
+                <li><a href="">
+                        <img src="./Images/backpack.png" alt="pic">
+                        <h3>School Pickups</h3>
+
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+
+                    </a></li>
+
+                <li><a href="">
+                        <img src="./Images/books.png" alt="pic">
+                        <h3>Extensive Library</h3>
+
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+
+                    </a></li>
+
+                <li><a href="">
+                        <img src="./Images/bus.png" alt="pic">
+                        <h3>Outdoor Trips</h3>
+
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+
+                    </a></li>
+
+                <li><a href="">
+                        <img src="./Images/sandwich.png" alt="pic">
+                        <h3>Healthy Food</h3>
+
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+
+                    </a></li>
+
+                <li><a href="">
+                        <img src="./Images/first-aid-kit.png" alt="pic">
+                        <h3>First Aid Services</h3>
+
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+
+                    </a></li>
+
+                <li><a href="">
+                        <img src="./Images/plan.png" alt="pic">
+                        <h3>Games and Аctivities</h3>
+
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+
+                    </a></li>
+            </ul>
+
+        </section>
+
+        <section class="camps">
+            <h2>Upcoming CAMPS</h2>
+
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s</p>
+
+            <ul>
+                <li>
+                    <img src="./Images/photo-kids-playing-football.jpg" alt="pic">
+                    <section class="info">
+                        <div>
+                            <h3>Soccer Camp</h3>
+                            <p>15h February 2019</p>
+                        </div>
+                        <div>
+                            $35
+                        </div>
+                    </section>
+
+                    <section class="more-info">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+                        <button>ENROLL TODAY</button>
+                    </section>
+                </li>
+
+                <li>
+                    <img src="./Images/swimming-pool.jpeg" alt="pic">
+                    <section class="info">
+                        <div>
+                            <h3>Soccer Camp</h3>
+                            <p>15h February 2019</p>
+                        </div>
+                        <div>
+                            $35
+                        </div>
+                    </section>
+
+                    <section class="more-info">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+                        <button>ENROLL TODAY</button>
+                    </section>
+                </li>
+
+                <li>
+                    <img src="./Images/kids_dogs_playing.jpg" alt="pic">
+                    <section class="info">
+                        <div>
+                            <h3>Soccer Camp</h3>
+                            <p>15h February 2019</p>
+                        </div>
+                        <div>
+                            $35
+                        </div>
+                    </section>
+
+                    <section class="more-info">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+                        <button>ENROLL TODAY</button>
+                    </section>
+                </li>
+
+            </ul>
+
+        </section>
+    </main>
+
+    <footer>
+
+        <p>CopyRight 2014. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        </ul>
+
+    </footer>
+</body>
+
+</html>
