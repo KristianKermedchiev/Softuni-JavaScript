@@ -1,3 +1,3 @@
 # Softuni
 
-![image](https://user-images.githubusercontent.com/106478447/186514141-36f01f2d-2542-4ed8-a288-f82c94da30ff.png)
+![monkeys](https://user-images.githubusercontent.com/106478447/187046989-20d1f6e4-e507-415f-a4d5-1b3f65d8c07a.PNG)
