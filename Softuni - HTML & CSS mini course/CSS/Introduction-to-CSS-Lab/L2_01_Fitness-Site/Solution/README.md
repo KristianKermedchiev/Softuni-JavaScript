@@ -1,3 +1,3 @@
 # Softuni
 
-![image](https://user-images.githubusercontent.com/106478447/186514141-36f01f2d-2542-4ed8-a288-f82c94da30ff.png)
+![fitness site](https://user-images.githubusercontent.com/106478447/187077090-7907e9f3-e9c3-4a40-9b86-362735393462.PNG)
