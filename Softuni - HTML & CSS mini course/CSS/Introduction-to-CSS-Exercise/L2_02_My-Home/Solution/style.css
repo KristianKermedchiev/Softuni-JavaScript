@@ -21,66 +21,78 @@ Submit your solutions in the [SoftUni Judge System](https://judge.softuni.bg/Con
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-article{
-    font-family: 'Open Sans', sans-serif;
-}
-p {
-    color: #656565;
+header {
     display: inline-block;
 }
 
 .left {
-
-    margin-top: 30px;
-    float: left;
-    margin-left: 200px;
-    border-left: 3px solid #656565;
+    display: inline-block;
+    width: 500px;
+    margin-left: 363px;
+    margin-top: 45px;
+    border-left: 3px solid black;
+    padding-left: 20px;
 }
 
 .right {
-    margin-top: 30px;
-    float: right;
-    margin-right: 437px;
-    border-left: 3px solid #656565;
+    display: inline-block;
+    width: 500px;
+    margin-left: 185px;
+    margin-top: 50px;
+    border-left: 3px solid black;
+    padding-left: 20px;
 }
 
-h2, p {
-    margin-left: 20px;
+.left p{
+    font-size: 22px;
+    color: #656565;
+}
+.right p{
+    font-size: 22px;
+    color: #656565;
 }
 
-h2 {
-    font-family: sans-serif;
-    letter-spacing: 4px;
-    font-size: 30px;
+.left h2{
+    font-size: 40px;
+    font-family: 'Open Sans';
+    letter-spacing: 5px;
     font-weight: 100;
-    
+    margin-top: 8px;
 }
 
-/* main */
+.right h2{
+    font-size: 40px;
+    font-family: 'Open Sans';
+    letter-spacing: 5px;
+    font-weight: 100;
+    margin-top: 8px;
+}
 
 #left{
-    font-family: 'Open Sans' sans-serif;
-    float: left;
-    width: 309px;
-    margin-left: 200px;
-    margin-top: 30px;
-    
+    display: inline-block;
+    font-family: 'sans-serif';
+    width: 305px;
+    margin-left: 360px;
+    font-size: 19px;
 }
 
-#center {
-    font-family: 'Open Sans' sans-serif;
-    float:left;
-    width: 309px;
-    margin-left: 50px;
+#center{
+    display: inline-block;
+    font-family: 'sans-serif';
     margin-top: 30px;
+    width: 310px;
+    padding-left: 15px;
+    font-size: 19px;
+}
+
+
+#right{
+    display: inline-block;
+    margin-top: 30px;  
+    margin-left: 80px;
 }
 
 img {
-    float: right;
-    width: 309px;
-    margin-right: 324px;
-    margin-top: 30px;
     height: 222px;
-    
+    width: 305px;
 }
-
