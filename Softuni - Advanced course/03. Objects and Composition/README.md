@@ -2,8 +2,12 @@
 
 In this lecture we covered the following topics:
 
-Arrays and Nested Arrays
+Objects and Composition
 
-• Arrays (definition, accessing elements, properties and methods);
+• Objects (object and properties);
 
-• Nested Arrays (definition, loop through nested arrays, manipulate data).
+• JSON;
+
+• Object Composition;
+
+• Modular Code.
