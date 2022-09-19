@@ -1,19 +1,19 @@
 function sortingNumbers(input) {
-
-    let half = input.length / 2
-
-    let rightArray = input
-        .sort((a, b) => a - b)
-        .splice(half,)
-        .reverse();
-
-    let leftArray = input.sort((a, b) => a - b);
-
+    
     let result = [];
+    let i = 0;
 
-    while (rightArray.length !== 0) {
-        result.push(leftArray.shift());
-        result.push(rightArray.shift());
+    while(input.length !== 0){
+        if(i % 2 === 0){
+            input.sort((a, b) => a - b);
+            result.push(input[0]);
+            input.shift();
+        } else if (i % 2 !== 0){
+            input.sort((a, b) => b - a);
+            result.push(input[0]);
+            input.shift();
+        }
+        i++
     }
 
     return result
