@@ -3,6 +3,4 @@ function edit(ref, match, replacer) {
     const matcher = new RegExp(match, 'g');
     const edited = content.replace(matcher, replacer);
     ref.textContent = edited;
-  }
-  
-let element = document.getElementById('e1')
+}
