@@ -6,8 +6,6 @@ function printDeckOfCards(cards) {
         const validFaces = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
         const validSuits = ['S', 'H', 'D', 'C'];
 
-       
-
         if (validFaces.indexOf(face.toString()) === -1) {
             flag = false;
         }
@@ -61,6 +59,5 @@ function printDeckOfCards(cards) {
     }
     console.log(buff)
 } 
-
 printDeckOfCards(['AS', '10D', 'KH', '2C']);
 printDeckOfCards(['2C', '3D', 'QD', '1C']);
