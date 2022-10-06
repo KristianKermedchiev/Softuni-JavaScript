@@ -50,5 +50,3 @@ requestValidator({
     uri: 'home.bash',
     message: 'rm -rf /*'
 }); /* This should return Invalid request header: Invalid Version */
-requestValidator();
-requestValidator();
