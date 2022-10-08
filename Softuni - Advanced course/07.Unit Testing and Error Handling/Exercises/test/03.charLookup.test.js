@@ -26,7 +26,7 @@ describe('Tests for lookupChar', ()=>{
     });
 
 
-    //Checks if first string.length = Index;
+    //Checks if first string.length <= Index;
     it('Should return Incorrect index if first input.length < second input.', ()=>{
         assert.equal(lookupChar('1', 2), 'Incorrect index');
     });
