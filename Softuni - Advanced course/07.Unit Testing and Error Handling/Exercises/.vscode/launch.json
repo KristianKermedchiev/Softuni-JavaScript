@@ -30,7 +30,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\test\\02.evenOrOdd.test.js"
+            "program": "${file}"
         }
     ]
 }

@@ -7,5 +7,5 @@ function lookupChar(string, index) {
     }
     return string.charAt(index);
 }
-
+console.log(lookupChar('5', 0));
 module.exports = { lookupChar };
