@@ -2,6 +2,8 @@ let { assert } = require('chai');
 let { isOddOrEven } = require('../02.evenOrOdd');
 
 describe ('Tests for evenOrOdd', () => {
+
+    // Checks input;
     it('Should return undefined if input is an array', ()=>{
         assert.equal(isOddOrEven([]), undefined);
     });
@@ -15,7 +17,7 @@ describe ('Tests for evenOrOdd', () => {
         assert.equal(isOddOrEven({}), undefined);
     });
 
-
+    // Checks Odd result
     it('Should return even, if given one digit numbers as String', () =>{
         assert.equal(isOddOrEven('2'), 'odd');
     });
@@ -29,7 +31,7 @@ describe ('Tests for evenOrOdd', () => {
     });
 
 
-
+    // Checks Even result
     it('Should return even, if given 4 digit numbers as String', () =>{
         assert.equal(isOddOrEven('3333'), 'even');
     });
