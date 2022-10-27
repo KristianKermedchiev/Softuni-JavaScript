@@ -2,16 +2,12 @@
 
 In this lecture we covered the following topics:
 
-Syntax, Functions and Statements
+HTTP and REST Services
 
-• Data Types;
+• HTTP Headers;
 
-• Variables;
+• CRUD Operations;
 
-• Strict Mode;
+• REST Services;
 
-• Operators;
-
-• Functions;
-
-• Hoisting.
+• Popular BaaS Solutions.
