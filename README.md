@@ -10,4 +10,6 @@ Softuni HTML & CSS mini course - 18AUG2022 - 23AUG2022.
 
 Softuni JavaScript Advanced Module - 12SEP2022 - 22OCT2022.
 
+Softuni JavaScript Applications Module - 25OCT2022 - 03DEC2022.
+
 More information about each topic course will be present in its respective folder.
