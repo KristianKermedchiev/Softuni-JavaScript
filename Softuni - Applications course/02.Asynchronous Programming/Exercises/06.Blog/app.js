@@ -26,7 +26,9 @@ async function getComments(){
     const titleElement = document.getElementById('post-title');
     const postBody = document.getElementById('post-body');
     const postUlElement = document.getElementById('post-comments');
+
     postUlElement.innerHTML = '';
+
     const postResponse = await fetch(postUrl);
     const postData = await postResponse.json();
 
@@ -44,6 +46,8 @@ async function getComments(){
         li.textContent = c.text;
         postUlElement.appendChild(li);
     });
+
+    
 };
 
 attachEvents();
