@@ -1,4 +1,4 @@
-import { showDetails } from './details.js';
+import {showDetails} from './details.js';
 
 const section = document.getElementById('homeView');
 const main = document.getElementsByTagName('main')[0];
@@ -8,23 +8,24 @@ const url = `http://localhost:3030/jsonstore/collections/myboard/posts`;
 
 section.remove();
 
-export function showHome() {
+export async function showHome() {
     const topicContainer = section.querySelector('.topic-title');
 
-    const posts = loadPost();
-
-
-
+    const posts = await loadPost();
+    const content = Object.values(posts).map(x => topicTemplate(x));
+    topicContainer.replaceChildren(...content);
     main.replaceChildren(section);
 }
 
-function topicTemplate() {
+
+
+function topicTemplate(data) {
     const container = document.createElement('div');
     container.classList.add('topic-container');
     container.innerHTML = `
     <div class="topic-name-wrapper">
         <div class="topic-name">
-            <a href="#" class="normal">
+            <a href="#" class="normal" id="${data._id}">
                 <h2>${data.topicName}</h2>
             </a>
             <div class="columns">
@@ -38,6 +39,7 @@ function topicTemplate() {
         </div>
     </div>`;
 
+    container.querySelector('a').addEventListener('click', showDetails);
     return container;
 }
 
