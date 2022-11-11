@@ -1,53 +1,76 @@
 function attachEvents() {
-    document.getElementById('btnLoadPosts').addEventListener('click', getPosts);
-    document.getElementById('btnViewPost').addEventListener('click', getComments);
-};
+    const baseUrl = 'http://localhost:3030/jsonstore/blog/';
+    const posts = document.querySelector("#posts");
+    const postTitle = document.querySelector("#post-title");
+    const postBody = document.querySelector("#post-body");
+    const comments = document.querySelector("#post-comments");
 
-async function getPosts(){
-    const selectOption = document.getElementById('posts');
-    const url = `http://localhost:3030/jsonstore/blog/posts`;
-    selectOption.innerHTML = '';
-    const response = await fetch(url);
-    const data = await response.json();
+    document.querySelector("#btnLoadPosts").addEventListener('click', () => getPosts());
+    document.querySelector("#btnViewPost").addEventListener('click', () => viewPostDetails());
 
-    Object.values(data).forEach(post => {
-        const option = document.createElement('option');
-        option.value = post.id;
-        option.text = post.title;
-        selectOption.appendChild(option)
-    });
-};
+    async function getPosts() {
+        try {
+            const response = await fetch(`${baseUrl}posts`);
+            if (!response.ok) {
+                throw new Error('Error');
+            }
+            const data = await response.json();
 
-async function getComments(){
-    const postUrl = `http://localhost:3030/jsonstore/blog/posts`;
-    const commentsUrl = `http://localhost:3030/jsonstore/blog/comments`;
+            posts.replaceChildren();
+            Object.values(data).forEach(x => {
+                htmlGenerator('option', x.title, posts, x.id);
+            });
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
 
-    const selectOption = document.getElementById('posts').selectedOptions[0].value;
-    const titleElement = document.getElementById('post-title');
-    const postBody = document.getElementById('post-body');
-    const postUlElement = document.getElementById('post-comments');
+    async function viewPostDetails() {
+        try {
+            const res = await fetch(`${baseUrl}posts`);
+            if (!res.ok) {
+                throw new Error('Error');
+            }
+            const allPosts = await res.json();
 
-    postUlElement.innerHTML = '';
+            const id = posts.value;
+            const title = posts.options[posts.selectedIndex].text;
+            const body = Object.values(allPosts).find(x => x.title === title);
 
-    const postResponse = await fetch(postUrl);
-    const postData = await postResponse.json();
+            postTitle.textContent = title;
+            postBody.textContent = body.body;
 
-    const commentsResponse = await fetch(commentsUrl);
-    const commentsData = await commentsResponse.json();
+            const response = await fetch(`${baseUrl}comments`);
+            if (!response.ok) {
+                throw new Error('Error');
+            }
+            const info = await response.json();
 
-    const selectedPost = Object.values(postData).find(post => post.id = selectOption);
-    titleElement.textContent = selectedPost.title;
-    postBody.textContent = selectedPost.body;
+            comments.replaceChildren();
+            Object.values(info).forEach(x => {
+                if (id === x.postId) {
+                    const li = htmlGenerator('li', x.text, comments);
+                    li.id = x.id;
+                }
+            });
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
 
-    const comments = Object.values(commentsData).filter(c => c.postId === selectOption);
+    function htmlGenerator(tagName, content, parent, value) {
+        const el = document.createElement(tagName);
+        el.textContent = content;
 
-    comments.forEach(c => {
-        const li = document.createElement('li');
-        li.textContent = c.text;
-        postUlElement.appendChild(li);
-    });
+        if (parent) {
+            parent.appendChild(el);
+        }
 
-    
-};
+        if (value) {
+            el.setAttribute('value', value);
+        }
+        return el;
+    }
+}
 
 attachEvents();
