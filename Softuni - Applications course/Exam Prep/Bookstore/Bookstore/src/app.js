@@ -3,6 +3,9 @@ import { page, render } from './lib.js';
 import { getUserData } from './utils.js';
 import { createView } from './views/create.js';
 import { dashboardView } from './views/dashboard.js';
+import { detailsView } from './views/details.js';
+import { editView } from './views/edit.js';
+import { homeView } from './views/home.js';
 import { loginView } from './views/login.js';
 import { registerView } from './views/register.js';
 
@@ -20,13 +23,13 @@ document.getElementById('logoutBtn').addEventListener('click', onLogout);
 // create middleware ->;
 // Below views change on task;
 page(decoreateContext);
-page('/', () => console.log('Home'));
+page('/', homeView);
 page('/login', loginView);
 page('/register', registerView);
 page('/create', createView);
 page('/dashboard', dashboardView);
-page('/books/:id', () => console.log('Details'));
-page('/edit/:id', () => console.log('Edit'));
+page('/books/:id', detailsView);
+page('/edit/:id', editView);
 // page('/search', () => console.log('Bonus'));
 
 updateNav();
@@ -49,7 +52,7 @@ export function updateNav(){
         document.querySelector('.user').style.display = 'block';
         document.querySelector('.guest').style.display = 'none';
         // if Welcome message ->
-        document.getElementById('span').textContent = `${userData.email}`;
+        document.getElementById('span').textContent = `Welcome, ${userData.email}`;
         document.querySelector("#span").style.display = 'inline-block';
     } else {
         document.querySelector('.user').style.display = 'none';
