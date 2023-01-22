@@ -2,7 +2,7 @@
 
 Softuni courses and homeworks.
 
-Softuni JavaScript Advanced Module - 25OCT2022 - 03DEC2022.
+Softuni JavaScript Applications Module - 25OCT2022 - 03DEC2022.
 
 In this course we covered the following topics:
 
