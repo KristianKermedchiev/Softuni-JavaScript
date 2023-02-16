@@ -25,6 +25,9 @@ exports.register = async (username, email, password, repeatPassord) => {
     };
 
 
+    if(password.length < 4){
+        throw new Error('Password too short!');
+    };
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
