@@ -5,7 +5,6 @@ function getFirstMongooseError(error) {
 };
 
 exports.getErrorMessage = (error) => {
-    console.log(error)
     switch(error.name){
         case 'Error':
             return error.message;
@@ -15,4 +14,3 @@ exports.getErrorMessage = (error) => {
                     return error.message;
     };
 };
-
