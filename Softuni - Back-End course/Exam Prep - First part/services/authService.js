@@ -47,7 +47,6 @@ exports.login = async (email, password) => {
         throw new Error('Invalid email or password!');
     };
 
-
     const payload = { 
         _id: user._id,
         email,
