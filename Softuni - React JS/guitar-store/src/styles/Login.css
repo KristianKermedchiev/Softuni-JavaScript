@@ -46,6 +46,17 @@ h2{
 .inputbox input:valid + label {
   top: -5px;
 }
+.inputbox input:-webkit-autofill,
+.inputbox input:-webkit-autofill:hover,
+.inputbox input:-webkit-autofill:focus {
+  border-bottom: 2px solid #fff; /* style for the input field when autofilled */
+  -webkit-text-fill-color: #fff; /* style for the text when autofilled */
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset; /* hide the default background color */
+}
+.inputbox input:-webkit-autofill::dropdown-item {
+  background-color: #222; /* background color for the dropdown item */
+  color: #fff; /* text color for the dropdown item */
+}
 .inputbox input{
     width: 100%;
     height: 50px;
