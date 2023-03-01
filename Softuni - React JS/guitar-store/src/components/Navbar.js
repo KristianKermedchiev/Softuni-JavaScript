@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Navbar.css';
 
 function Navbar() {
   return (
@@ -10,6 +11,7 @@ function Navbar() {
         <li><a href="/login">Login</a></li>
       </ul>
     </nav>
+    
   );
 }
 

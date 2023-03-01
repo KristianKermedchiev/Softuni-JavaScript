@@ -1,61 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Register.css';
 
 function Register() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // add code here to handle form submission
-  };
-
-  return (
-    <div className="register-container">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="confirm-password">Confirm Password</label>
-          <input
-            type="password"
-            id="confirm-password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
+	return (
+		<div className="hero">
+			<div className="form-box">
+				<h2>Register</h2>
+				<form id="register" className="input-group" autoComplete='off'>
+					<input type="text" className="input-field" placeholder="User Id" required />
+					<input type="email" className="input-field" placeholder="Email" required />
+					<input type="password" className="input-field" placeholder="Enter Password" required />
+					<input type="password" className="input-field" placeholder="Repeat Password" required />
+					<button type="submit" className="submit-btn">Register</button>
+				</form>
+			</div>
+		</div>
+	);
 }
 
 export default Register;
