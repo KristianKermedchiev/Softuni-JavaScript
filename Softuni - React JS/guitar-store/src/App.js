@@ -1,5 +1,4 @@
 import Navbar from './components/Navbar';
-import './styles/App.css';
 import Footer from './components/Footer';
 import Router from './components/Router';
 import styled from 'styled-components';
@@ -17,11 +16,6 @@ const Wrapper = styled.div`
     margin-right: calc(-1 * (100vw - 100%)) !important;
   `;
   
-
-
-  
-  
-
 function App() {
 	return (
 			<Wrapper>

@@ -1,15 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
 .login{
     height: 100%;
     width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../styles/public/background.jpg');
     background-position: center;
     background-size: cover;
-    position: absolute;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 h2{
     text-align: center;
