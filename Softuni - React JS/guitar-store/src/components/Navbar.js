@@ -1,6 +1,7 @@
 import React from 'react';
-import '../styles/Navbar.css';
 import styled from 'styled-components';
+import { useState, useEffect } from 'react';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const Nav = styled.nav`
 background-color: #333; /* set the background color of the nav bar */
@@ -31,17 +32,34 @@ const A = styled.a`
 `
 
 function Navbar() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setIsLoggedIn(user ? true : false);
+    });
+  
+    return () => unsubscribe();
+  }, []);
+
   return (
     <Nav>
       <Ul>
         <Li><A href="/">Home</A></Li>
         <Li><A href="/catalog">Catalog</A></Li>
-        <Li><A href="/register">Register</A></Li>
-        <Li><A href="/login">Login</A></Li>
+        {isLoggedIn ? (
+          <Li><A href="/profile">Profile</A></Li>
+        ) : (
+          <>
+            <Li><A href="/register">Register</A></Li>
+            <Li><A href="/login">Login</A></Li>
+          </>
+        )}
       </Ul>
     </Nav>
-    
   );
-}
+};
 
 export default Navbar;

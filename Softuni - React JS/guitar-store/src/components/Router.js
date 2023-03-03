@@ -3,8 +3,8 @@ import Home from './Home';
 import Login from './Login';
 import Catalog from './Catalog';
 import Register from './Register';
+import Profile from './Profile';
 import styled from 'styled-components';
-
 
 const Wrapper = styled.div`
 width: 100%;
@@ -19,6 +19,7 @@ function Router() {
 					<Route path="/catalog" element={<Catalog />} />
 					<Route path="/register" element={<Register />} />
 					<Route path="/login" element={<Login />} />
+					<Route path="/profile" element={<Profile />} />
 				</Routes>
 		</Wrapper>
 	);
