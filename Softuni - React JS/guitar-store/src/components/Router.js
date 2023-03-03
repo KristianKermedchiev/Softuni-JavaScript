@@ -3,6 +3,8 @@ import Home from './Home';
 import Login from './Login';
 import Catalog from './Catalog';
 import Register from './Register';
+import Create from './Create';
+// import Logout from './Logout';
 import Profile from './Profile';
 import styled from 'styled-components';
 
@@ -20,6 +22,7 @@ function Router() {
 					<Route path="/register" element={<Register />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/profile" element={<Profile />} />
+					<Route path="/create" element={<Create />} />
 				</Routes>
 		</Wrapper>
 	);

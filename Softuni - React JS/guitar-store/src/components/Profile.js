@@ -1,11 +1,17 @@
-import React from 'react';
+// import React from 'react';
+// import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-function Profile() {
-  return (
-    <div>
-      <p>Profile</p>
-    </div>
-  );
-}
 
-export default Profile;
+// function Profile() {
+//     const auth = getAuth();
+// onAuthStateChanged(auth, (user) => {
+//     const currentUser = user.email;
+// });
+// return (
+//     <div>
+//       <p>Logged in as: {currentUser}</p>
+//     </div>
+//   );
+// }
+
+// export default Profile;

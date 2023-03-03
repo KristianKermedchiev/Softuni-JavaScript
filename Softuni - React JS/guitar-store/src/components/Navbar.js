@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth, onAuthStateChanged, signOut  } from "firebase/auth";
 
 const Nav = styled.nav`
 background-color: #333; /* set the background color of the nav bar */
@@ -44,13 +44,28 @@ function Navbar() {
     return () => unsubscribe();
   }, []);
 
+  const handleLogout = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        setIsLoggedIn(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <Nav>
       <Ul>
         <Li><A href="/">Home</A></Li>
         <Li><A href="/catalog">Catalog</A></Li>
         {isLoggedIn ? (
+          <>
           <Li><A href="/profile">Profile</A></Li>
+          <Li><A href="/Create">Create</A></Li>
+          <Li><A onClick={handleLogout} href="">Logout</A></Li>
+        </>
         ) : (
           <>
             <Li><A href="/register">Register</A></Li>
