@@ -5,7 +5,6 @@ import styled from 'styled-components';
 const Wrapper = styled.footer`
     width: 100%;
     flex-grow: 1;
-	border: 1px solid red;
   `;
 
 function Footer() {

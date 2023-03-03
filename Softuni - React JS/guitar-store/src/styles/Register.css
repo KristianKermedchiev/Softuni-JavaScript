@@ -6,6 +6,9 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h2{
   text-align: center;
@@ -17,7 +20,7 @@ h2{
   width: 380px;
   height: 480px;
   position: relative;
-  margin: 6% auto;
+
   background: transparent;
   
   border: 2px solid rgba(255, 255,255, 0.5);
