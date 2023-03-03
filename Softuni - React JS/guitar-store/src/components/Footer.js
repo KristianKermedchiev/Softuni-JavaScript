@@ -1,13 +1,21 @@
 import '../styles/Footer.css';
+import styled from 'styled-components';
+
+
+const Wrapper = styled.footer`
+    width: 100%;
+    flex-grow: 1;
+	border: 1px solid red;
+  `;
 
 function Footer() {
 	return (
-		<footer>
+		<Wrapper>
 			<ul>
 				<li><a href="/">About Us</a></li>
 				<li><a href="/">Contact Us</a></li>
 			</ul>
-		</footer>
+		</Wrapper>
 
 	);
 }

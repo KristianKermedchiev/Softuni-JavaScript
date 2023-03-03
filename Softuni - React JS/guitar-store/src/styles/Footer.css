@@ -4,6 +4,7 @@ footer {
     display: flex; /* use flexbox to center the list items */
     justify-content: center; /* center the list items horizontally */
     align-items: center; /* center the list items vertically */
+    position: relative;
   }
   
   footer ul {

@@ -1,25 +1,34 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Login from './components/Login';
-import Catalog from './components/Catalog';
-import Register from './components/Register';
 import './styles/App.css';
+import Footer from './components/Footer';
+import Router from './components/Router';
+import styled from 'styled-components';
+
+
+const Wrapper = styled.div`
+    background-color: #fff;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 100vh;
+    // Shows vertical scrollbar only when needed
+    overflow-y: auto;
+    // Dont shift content to side when vertical scrollbar shows/hides
+    margin-right: calc(-1 * (100vw - 100%)) !important;
+  `;
+  
+
+
+  
+  
 
 function App() {
 	return (
-		<Router>
-			<div>
+			<Wrapper>
 				<Navbar />
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/catalog" element={<Catalog />} />
-					<Route path="/register" element={<Register />} />
-					<Route path="/login" element={<Login />} />
-				</Routes>
-				
-			</div>
-		</Router>
+					<Router />
+				<Footer />
+			</Wrapper>
 	);
 }
 
