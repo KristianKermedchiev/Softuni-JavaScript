@@ -1,0 +1,44 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+    padding: 0 20px;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../styles/public/background.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffffc1;
+  }
+  
+  .home p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ffffffc1;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background-color 0.2s ease-out;
+    text-decoration: none;
+  }
+  
+  .btn-primary {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e53935;
+  }
