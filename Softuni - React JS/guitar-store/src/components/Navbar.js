@@ -63,7 +63,7 @@ function Navbar() {
         {isLoggedIn ? (
           <>
           <Li><A href="/profile">Profile</A></Li>
-          <Li><A href="/Create">Create</A></Li>
+          <Li><A href="/Create">Create an offer</A></Li>
           <Li><A onClick={handleLogout} href="">Logout</A></Li>
         </>
         ) : (
