@@ -15,7 +15,7 @@ function Login() {
     event.preventDefault();
 
     const auth = getAuth(app);
-    
+
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
