@@ -11,8 +11,8 @@ function Footer() {
 	return (
 		<Wrapper>
 			<ul>
-				<li><a href="/">About Us</a></li>
-				<li><a href="/">Contact Us</a></li>
+				<li><a href="/AboutUs">About Us</a></li>
+				<li><a href="/ContactUs">Contact Us</a></li>
 			</ul>
 		</Wrapper>
 

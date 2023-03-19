@@ -11,7 +11,7 @@
 }
 h2{
   text-align: center;
-  padding: 70px;
+  padding: 40px;
   color: aliceblue;
   font-size: xx-large;
 }
@@ -37,7 +37,7 @@ h2{
 }
 
 .input-group{
-  top:180px;
+  top:120px;
   position: absolute;
   width: 280px;
   transition: .5s;
@@ -82,12 +82,7 @@ h2{
   outline: none;
   border-radius: 30px;
 }
-#login{
-  left: 50px;
-}
-#register{
-  left: 50px;
-}
+
 #create {
   justify-content: center;
   align-items: center;

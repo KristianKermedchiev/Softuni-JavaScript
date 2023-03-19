@@ -4,7 +4,8 @@ import Login from './Login';
 import Catalog from './Catalog';
 import Register from './Register';
 import Create from './Create';
-// import Logout from './Logout';
+import AboutUs from './AboutUs';
+import ContactUs from './ContactUs';
 import Profile from './Profile';
 import styled from 'styled-components';
 
@@ -23,6 +24,8 @@ function Router() {
 					<Route path="/login" element={<Login />} />
 					<Route path="/profile" element={<Profile />} />
 					<Route path="/create" element={<Create />} />
+					<Route path="/AboutUs" element={<AboutUs />} />
+					<Route path="/ContactUs" element={<ContactUs />} />
 				</Routes>
 		</Wrapper>
 	);
