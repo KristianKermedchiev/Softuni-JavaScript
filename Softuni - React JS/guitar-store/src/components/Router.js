@@ -7,6 +7,7 @@ import Create from './Create';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import Profile from './Profile';
+import Details from './Details';
 
 
 function Router() {
@@ -22,6 +23,7 @@ function Router() {
 					<Route path="/create" element={<Create />} />
 					<Route path="/aboutUs" element={<AboutUs />} />
 					<Route path="/contactUs" element={<ContactUs />} />
+					<Route path="/catalog/:id" element={<Details />} />
 				</Routes>
 		
 	);

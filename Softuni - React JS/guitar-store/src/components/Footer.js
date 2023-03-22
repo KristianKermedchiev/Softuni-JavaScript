@@ -1,4 +1,3 @@
-// import '../styles/Footer.css';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 

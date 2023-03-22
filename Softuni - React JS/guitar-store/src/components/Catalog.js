@@ -2,6 +2,8 @@ import '../styles/Catalog.css';
 import app from '../Utils/firebase';
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 
 function Catalog() {
   const [guitars, setGuitars] = useState([]);
@@ -42,10 +44,14 @@ function Catalog() {
     <div>
       <div className="catalog-container">
         {visibleGuitars.map((guitar) => (
+          
           <div className="catalog-item" key={guitar.id}>
+             <Link to={`/catalog/${guitar.id}`} key={guitar.id}>
             <img src={guitar.imgUrl} alt={guitar.type}></img>
             <h3>{guitar.model}</h3>
+            </Link>
           </div>
+          
         ))}
       </div>
       <div className="pagination">
@@ -65,3 +71,8 @@ function Catalog() {
 }
 
 export default Catalog;
+
+
+
+
+

@@ -19,6 +19,7 @@
   border: 1px solid #ccc;
   text-align: center;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .catalog-item:hover {
@@ -36,6 +37,7 @@
   margin: 0;
   font-size: 18px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .pagination {

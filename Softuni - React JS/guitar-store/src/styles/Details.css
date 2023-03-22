@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60vh;
+  }
+  
+  h2 {
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+  }
+  
+  .guitar-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .guitar-image {
+    max-width: 40%;
+    margin-right: 20px;
+  }
+  
+  .guitar-info {
+    max-width: 60%;
+  }
+  
+  .guitar-info p {
+    margin: 5px 0;
+  }
+  
+  .guitar-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .guitar-description p {
+    max-width: 70%;
+    margin-right: 20px;
+  }
+  
+  .guitar-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    max-width: 30%;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
+  
