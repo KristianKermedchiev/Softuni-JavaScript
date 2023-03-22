@@ -3,7 +3,7 @@ import '../styles/AboutUs.css';
 function AboutUs() {
     return (
         <main>
-             <section class="intro">
+             <section className="intro">
                 <h1>About Us</h1>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar fermentum nisi, et semper ex tincidunt a. Etiam scelerisque, augue ut auctor dapibus, lectus enim semper odio, sed faucibus nulla massa sed purus. Vivamus tincidunt est ut est vulputate mattis. Nam mattis quis metus non rhoncus. Curabitur ut ipsum egestas, euismod erat vitae, euismod ante. Proin malesuada suscipit nisi. Nam laoreet in sem eu interdum. Etiam neque libero, ornare vel velit nec, ullamcorper egestas neque.

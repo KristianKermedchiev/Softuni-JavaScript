@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import '../styles/Create.css';
-
+import { collection, getFirestore, addDoc  } from "firebase/firestore";
+import app from '../Utils/firebase'
+import { useNavigate } from 'react-router-dom';
 
 function Create() {
+  const navigate = useNavigate();
 
+  const db = getFirestore(app);
     const [type, setTitle] = useState('');
     const [imgUrl, setimgUrl] = useState('');
     const [model, setModel] = useState('');
@@ -12,9 +16,20 @@ function Create() {
     const [price, setprice] = useState('');
     const [description, setDescription] = useState('');
   
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
       event.preventDefault();
-      // handle form submission
+
+      await addDoc(collection(db, "Guitars"),{
+
+        type: type,
+        imgUrl: imgUrl,
+        model: model,
+        fretCount: fretCount,
+        stringCount: stringCount,
+        price: price,
+        description: description
+      })
+      navigate('/catalog')
     };
 
     return (

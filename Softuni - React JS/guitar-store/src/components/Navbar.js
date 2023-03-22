@@ -2,47 +2,56 @@ import React from 'react';
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import { getAuth, onAuthStateChanged, signOut  } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
 
 const Nav = styled.nav`
-background-color: #333; /* set the background color of the nav bar */
-display: flex; /* use flexbox to center the list items */
-justify-content: center; /* center the list items horizontally */
-align-items: center; /* center the list items vertically */
+background-color: #333;
+display: flex; 
+justify-content: center; 
+align-items: center; 
 position: relative;
 width: 100%;
 height: 8vh;
 
 `
 const Ul = styled.ul`
- list-style-type: none; /* remove the bullet points from the list */
-    margin: 0; /* remove any default margin */
-    padding: 0; /* remove any default padding */
+ list-style-type: none;
+    margin: 0; 
+    padding: 0; 
 `
 
 const Li = styled.li `
-display: inline-block; /* display the list items in A row */
-margin: 0 10px; /* add some space between the list items */
+display: inline-block; 
+margin: 0 10px; 
 `
-const A = styled.a`
-    color: #fff; /* set the color of the links */
-    text-decoration: none; /* remove the underline from the links */
-    font-size: 16px; /* set the font size of the links */
-    font-weight: bold; /* set the font weight of the links */
-    text-transform: uppercase; /* capitalize the links */
+const NavItem = styled.div`
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    cursor: pointer;
 `
 
 function Navbar() {
-
+  
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  
   useEffect(() => {
+    
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setIsLoggedIn(user ? true : false);
     });
-  
+    
     return () => unsubscribe();
   }, []);
+  
+  const navigate = useNavigate();
+
+  const handleRouteChange = (routeName) => {
+    navigate(routeName);
+  };
 
   const handleLogout = () => {
     const auth = getAuth();
@@ -58,18 +67,18 @@ function Navbar() {
   return (
     <Nav>
       <Ul>
-        <Li><A href="/">Home</A></Li>
-        <Li><A href="/catalog">Catalog</A></Li>
+        <Li><NavItem onClick={() => handleRouteChange("/")}>Home</NavItem></Li>
+        <Li><NavItem onClick={() => handleRouteChange("/catalog")}>Catalog</NavItem></Li>
         {isLoggedIn ? (
           <>
-          <Li><A href="/profile">Profile</A></Li>
-          <Li><A href="/Create">Create an offer</A></Li>
-          <Li><A onClick={handleLogout} href="">Logout</A></Li>
+          <Li><NavItem onClick={() => handleRouteChange("/profile")}>Profile</NavItem></Li>
+          <Li><NavItem onClick={() => handleRouteChange("/create")}>Create an offer</NavItem></Li>
+          <Li><NavItem onClick={handleLogout}>Logout</NavItem></Li>
         </>
         ) : (
           <>
-            <Li><A href="/register">Register</A></Li>
-            <Li><A href="/login">Login</A></Li>
+            <Li><NavItem onClick={() => handleRouteChange("/register")}>Register</NavItem></Li>
+            <Li><NavItem onClick={() => handleRouteChange("/login")}>Login</NavItem></Li>
           </>
         )}
       </Ul>

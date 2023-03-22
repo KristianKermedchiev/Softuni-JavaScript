@@ -4,11 +4,11 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../Utils/firebase";
 import { useNavigate } from 'react-router-dom';
 
-
-
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
   const navigate = useNavigate();
 
   const handleLogin = (event) => {
@@ -24,10 +24,9 @@ function Login() {
         navigate('/catalog');
       })
       .catch((error) => {
-        const errorCode = error.code;
+        // const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
+        setError(errorMessage);
       });
   };
 
@@ -40,7 +39,16 @@ function Login() {
   };
 
   return (
+
+    
     <div className="login">
+      {error ? 
+      <div>
+        {error}
+      </div> :
+      null}
+      
+      
       <div className="login-form-box">
         <h2>Login</h2>
         <form onSubmit={handleLogin} id="login" className="input-group">
