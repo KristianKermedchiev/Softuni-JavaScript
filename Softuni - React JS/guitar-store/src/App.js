@@ -37,8 +37,7 @@ function App() {
       setHasUser(true);
     }
   });
-
-  console.log(hasUser);
+  
 	return (
 			<Wrapper>
 				<Navbar />
