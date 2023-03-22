@@ -1,0 +1,34 @@
+.catalog-container {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .catalog-item {
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .catalog-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .catalog-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .catalog-item h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
