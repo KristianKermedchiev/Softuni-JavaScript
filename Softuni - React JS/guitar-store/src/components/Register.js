@@ -21,7 +21,7 @@ function Register() {
 				// Signed in 
 				const user = userCredential.user;
 				console.log(user);
-				navigate('/login');
+				navigate('/catalog');
 			})
 			.catch((error) => {
 				const errorCode = error.code;
