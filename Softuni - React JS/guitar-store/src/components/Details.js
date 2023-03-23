@@ -1,13 +1,18 @@
+import app from '../Utils/firebase';
+import { collection, doc, deleteDoc, getDoc, getFirestore } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { collection, doc, deleteDoc, getDoc, getFirestore } from 'firebase/firestore';
-import app from '../Utils/firebase';
+import Spinner from './Spinner';
 import '../styles/Details.css';
+import '../styles/Spinner.css';
+
 
 function Details() {
     const { id } = useParams();
     const navigate = useNavigate();
     const [guitar, setGuitar] = useState(null);
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         const db = getFirestore(app);
@@ -23,12 +28,17 @@ function Details() {
             })
             .catch((error) => {
                 console.log('Error getting document:', error);
+            })
+            .finally(() => {
+                setLoading(false);
             });
     }, [id]);
 
     const handleDelete = async () => {
         const db = getFirestore(app);
         const guitarRef = doc(collection(db, 'Guitars'), id);
+        
+
 
         try {
             await deleteDoc(guitarRef);
@@ -39,8 +49,8 @@ function Details() {
         }
     };
 
-    if (!guitar) {
-        return <div>Loading...</div>;
+    if (loading || !guitar) {
+        return <Spinner />;
     }
 
     return (

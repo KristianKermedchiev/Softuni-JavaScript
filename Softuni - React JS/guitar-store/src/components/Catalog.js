@@ -1,18 +1,21 @@
-import '../styles/Catalog.css';
 import app from '../Utils/firebase';
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import Spinner from './Spinner';
+import '../styles/Catalog.css';
+import '../styles/Spinner.css';
 
 function Catalog() {
   const [guitars, setGuitars] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
 
   const db = getFirestore(app);
 
   useEffect(() => {
     const fetchGuitars = async () => {
+      setLoading(true);
       const guitarCollection = collection(db, "Guitars");
       const guitarSnapshot = await getDocs(guitarCollection);
       const guitarData = guitarSnapshot.docs.map((doc) => ({
@@ -20,9 +23,11 @@ function Catalog() {
         ...doc.data(),
       }));
       setGuitars(guitarData);
+      setLoading(false);
     };
 
     fetchGuitars();
+
   }, [db]);
 
   const handlePreviousClick = () => {
@@ -42,6 +47,7 @@ function Catalog() {
 
   return (
     <div>
+      {loading && <Spinner />}
       <div className="catalog-container">
         {visibleGuitars.map((guitar) => (
           
