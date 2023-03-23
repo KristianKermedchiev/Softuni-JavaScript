@@ -61,14 +61,15 @@ function Details() {
             <div className="guitar-description">
                 <p className='guitar-description-p'>Description: {guitar.description}</p>
                 <div className="guitar-buttons">
+                    <button>Rate</button>
+                    <button>Show Seller's Info</button>
                     {guitar && (
                         <Link to={{ pathname: `/catalog/${id}/edit`,  guitar }} key={guitar.id}>
                             <button>Edit Offer</button>
                         </Link>
                     )}
                     <button onClick={handleDelete}>Delete Offer</button>
-                    <button>Rate</button>
-                    <button>Show Seller's Info</button>
+                    
                 </div>
             </div>
         </div>
