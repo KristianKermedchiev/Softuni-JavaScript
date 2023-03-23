@@ -79,11 +79,11 @@ display: flex;
 
 .submit-btn{
   width: 40%;
-  padding: 10px 30px;
+  padding: 15px 30px;
   cursor: pointer;
   display: block;
-  margin-top: 20px;
-  margin-left: 5px;
+  margin-top: 40px;
+  margin-left: -5px;
   background: linear-gradient(to right, #ff105f,#ffad06);
   border: 0;
   outline: none;
@@ -92,10 +92,10 @@ display: flex;
 
 .cancel-btn{
   width: 40%;
-  padding: 10px 30px;
+  padding: 15px 30px;
   cursor: pointer;
   display: block;
-  margin-top: 15px;
+  margin-top: 40px;
   background: linear-gradient(to right, #ff105f,#ffad06);
   border: 0;
   outline: none;
