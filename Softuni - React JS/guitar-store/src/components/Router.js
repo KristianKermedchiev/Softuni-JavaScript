@@ -8,6 +8,7 @@ import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import Profile from './Profile';
 import Details from './Details';
+import Edit from './Edit';
 
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
 					<Route path="/aboutUs" element={<AboutUs />} />
 					<Route path="/contactUs" element={<ContactUs />} />
 					<Route path="/catalog/:id" element={<Details />} />
+					<Route path="/catalog/:id/edit" element={<Edit />} />
 				</Routes>
 		
 	);

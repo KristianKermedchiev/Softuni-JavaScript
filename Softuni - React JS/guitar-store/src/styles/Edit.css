@@ -1,0 +1,109 @@
+.Edit{
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../styles/public/background.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2{
+  text-align: center;
+  padding: 40px;
+  color: aliceblue;
+  font-size: xx-large;
+}
+.Edit-form-box{
+  width: 500px;
+  height: 700px;
+  position: relative;
+  margin: 6% auto;
+  background: transparent;
+  
+  border: 2px solid rgba(255, 255,255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  padding: 5px;   
+  position: relative;
+}
+.button-box{
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #ff61241f;
+  border-radius: 30px;
+}
+
+.input-group{
+  top:120px;
+  position: absolute;
+  width: 280px;
+  transition: .5s;
+}
+.input-field{
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+  height: 50px;
+  color: aliceblue;
+}
+.input-field-description{
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+  height: 90px;
+  color: aliceblue;
+}
+::placeholder {
+  color: #fff;
+}
+
+.buttons{
+display: flex;
+
+}
+
+.submit-btn{
+  width: 40%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
+  margin-left: 5px;
+  background: linear-gradient(to right, #ff105f,#ffad06);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+.cancel-btn{
+  width: 40%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin-top: 15px;
+  background: linear-gradient(to right, #ff105f,#ffad06);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+#Edit {
+  justify-content: center;
+  align-items: center;
+  left: 100px;
+}

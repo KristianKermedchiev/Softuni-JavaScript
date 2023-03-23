@@ -13,9 +13,7 @@ const Wrapper = styled.div`
     flex: 1;
     flex-direction: column;
     min-height: 100vh;
-    // Shows vertical scrollbar only when needed
     overflow-y: auto;
-    // Dont shift content to side when vertical scrollbar shows/hides
     margin-right: calc(-1 * (100vw - 100%)) !important;
   `;
 
