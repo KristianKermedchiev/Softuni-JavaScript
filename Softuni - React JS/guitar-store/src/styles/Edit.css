@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
 }
-h2{
+.edit-h2{
   text-align: center;
   padding: 40px;
   color: aliceblue;
@@ -36,13 +36,13 @@ h2{
   border-radius: 30px;
 }
 
-.input-group{
-  top:120px;
+.edit-input-group{
+  top:130px;
   position: absolute;
   width: 280px;
   transition: .5s;
 }
-.input-field{
+.edit-input-field{
   width: 100%;
   padding: 10px 0;
   margin: 5px 0;

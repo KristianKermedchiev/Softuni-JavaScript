@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
 }
-h2{
+.create-h2{
   text-align: center;
   padding: 40px;
   color: aliceblue;
@@ -36,13 +36,13 @@ h2{
   border-radius: 30px;
 }
 
-.input-group{
+.create-input-group{
   top:120px;
   position: absolute;
   width: 280px;
   transition: .5s;
 }
-.input-field{
+.create-input-field{
   width: 100%;
   padding: 10px 0;
   margin: 5px 0;
@@ -55,7 +55,7 @@ h2{
   height: 50px;
   color: aliceblue;
 }
-.input-field-description{
+.create-input-field-description{
   width: 100%;
   padding: 10px 0;
   margin: 5px 0;
@@ -71,7 +71,7 @@ h2{
 ::placeholder {
   color: #fff;
 }
-.submit-btn{
+.create-submit-btn{
   width: 85%;
   padding: 10px 30px;
   cursor: pointer;
@@ -81,6 +81,8 @@ h2{
   border: 0;
   outline: none;
   border-radius: 30px;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 #create {

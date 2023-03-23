@@ -4,12 +4,15 @@ import { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from '../Utils/firebase';
 import { useNavigate } from 'react-router-dom';
+import { doc, getFirestore, setDoc } from 'firebase/firestore';
+
 
 function Register() {
 	const [email, setEmail] = useState('');
 	const [password, setpassword] = useState('');
 	const [rePass, setrePass] = useState('');
 	const navigate = useNavigate();
+    const db = getFirestore(app);
 
 
 	const handleRegister = (event) => {
@@ -18,6 +21,13 @@ function Register() {
 		const auth = getAuth(app);
 		createUserWithEmailAndPassword(auth, email, password)
 			.then((userCredential) => {
+				setDoc(doc(db, "Users", userCredential.user.uid),{
+					id: userCredential.user.uid,
+					username: '',
+					email: email,
+					profileImg: '',
+					posts: ['']
+				  })
 				const user = userCredential.user;
 				console.log(user);
 				navigate('/catalog');
@@ -44,12 +54,12 @@ function Register() {
 		<div className="register">
 			<div className="form-box">
 				{/* {error ? <div>} */}
-				<h2>Register</h2>
+				<h2 className='register-h2'>Register</h2>
 				<form onSubmit={handleRegister} id="register" className="input-group" autoComplete='off'>
 					<input onChange={handleChangeEmail} type="email" className="input-field" placeholder="Email" required id='email' value={email} />
 					<input onChange={handlePassword} type="password" className="input-field" placeholder="Enter Password" required id='password' value={password} />
 					<input onChange={handleRePass} type="password" className="input-field" placeholder="Repeat Password" required id='rePass' value={rePass} />
-					<button type="submit" className="submit-btn">Register</button>
+					<button type="submit" className="register-submit-btn">Register</button>
 				</form>
 			</div>
 		</div>

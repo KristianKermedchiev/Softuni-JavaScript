@@ -12,12 +12,13 @@ function Details() {
     const navigate = useNavigate();
     const [guitar, setGuitar] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [owner, setOwner] = useState(null);
 
-
+//GET Guitar
     useEffect(() => {
         const db = getFirestore(app);
         const guitarRef = doc(collection(db, 'Guitars'), id);
-
+        
         getDoc(guitarRef)
             .then((doc) => {
                 if (doc.exists()) {
@@ -33,6 +34,30 @@ function Details() {
                 setLoading(false);
             });
     }, [id]);
+
+ // GET Owner
+ useEffect(() => {
+    if (guitar) {
+      const db = getFirestore(app);
+      const ownerRef = doc(collection(db, 'Users'), guitar.ownerId);
+
+      getDoc(ownerRef)
+        .then((doc) => {
+          if (doc.exists()) {
+            setOwner(doc.data());
+          } else {
+            console.log('No such document!');
+          }
+        })
+        .catch((error) => {
+          console.log('Error getting document:', error);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
+  }, [guitar]);
+
 
     const handleDelete = async () => {
         const db = getFirestore(app);
@@ -68,27 +93,33 @@ function Details() {
                     <p>Price: {guitar.price} $</p>
                 </div>
             </div>
+
             <div className="guitar-description">
                 <p className='guitar-description-p'>Description: {guitar.description}</p>
-                <div className="guitar-buttons">
+
+                {owner && owner.id === guitar && guitar.ownerId 
+                ? <div className="guitar-buttons">
                 <Link to={{ pathname: `/catalog/` }}>
                             <button>Back</button>
                         </Link>
+                    
                     <button>Rate</button>
                     <button>Show Seller's Info</button>
-                    {guitar && (
+                </div>
+                : <div className="guitar-buttons">
+                <Link to={{ pathname: `/catalog/` }}>
+                            <button>Back</button>
+                        </Link>
+                    
                         <Link to={{ pathname: `/catalog/${id}/edit`,  guitar }} key={guitar.id}>
                             <button>Edit Offer</button>
                         </Link>
-                    )}
                     <button onClick={handleDelete}>Delete Offer</button>
-                    
                 </div>
+                }
             </div>
-        </div>
+         </div>
     );
-}
+};
 
 export default Details;
-
-

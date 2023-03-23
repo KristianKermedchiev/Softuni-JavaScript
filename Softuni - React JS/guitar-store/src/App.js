@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Router from './components/Router';
 import styled from 'styled-components';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from './Utils/firebase'
-import Login from './components/Login';
+import PrivateRouter from './components/PrivateRouter';
+import PublicRouter from './components/PublicRouter';
 
 const Wrapper = styled.div`
     background-color: #fff;
@@ -41,8 +41,8 @@ function App() {
 				<Navbar />
         <ContentWrapper>
 					{hasUser ? 
-          <Router />:
-          <Login />}
+          <PrivateRouter />:
+          <PublicRouter />}
         </ContentWrapper>
 				<Footer />
 			</Wrapper>

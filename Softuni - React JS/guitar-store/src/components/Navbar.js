@@ -58,6 +58,7 @@ function Navbar() {
     signOut(auth)
       .then(() => {
         setIsLoggedIn(false);
+        navigate('/catalog');
       })
       .catch((error) => {
         console.log(error);

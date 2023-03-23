@@ -50,7 +50,7 @@ function Login() {
       
       
       <div className="login-form-box">
-        <h2>Login</h2>
+        <h2 className="login-h2">Login</h2>
         <form onSubmit={handleLogin} id="login" className="input-group">
           <input
             type="text"
@@ -68,7 +68,7 @@ function Login() {
             value={password}
             onChange={handlePasswordChange}
           />
-          <button type="submit" className="submit-btn">
+          <button type="submit" className="login-submit-btn">
             Login
           </button>
         </form>

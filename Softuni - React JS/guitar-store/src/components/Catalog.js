@@ -24,7 +24,7 @@ function Catalog() {
       }));
       setGuitars(guitarData);
       setLoading(false);
-    };
+    }
 
     fetchGuitars();
 

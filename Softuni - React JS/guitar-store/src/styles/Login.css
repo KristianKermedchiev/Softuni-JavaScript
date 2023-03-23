@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
 }
-h2{
+.login-h2{
     text-align: center;
     padding: 100px;
     color: aliceblue;
@@ -57,7 +57,7 @@ h2{
 ::placeholder {
     color: #fff;
   }
-.submit-btn{
+.login-submit-btn{
     width: 85%;
     padding: 10px 30px;
     cursor: pointer;
@@ -67,6 +67,7 @@ h2{
     border: 0;
     outline: none;
     border-radius: 30px;
+    margin-top: 40px;
 }
 #login{
     left: 50px;

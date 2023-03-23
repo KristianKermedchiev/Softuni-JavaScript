@@ -75,28 +75,28 @@ function Edit() {
     return (
         <div className="Edit">
             <div className='Edit-form-box'>
-                <h2>Edit Offer</h2>
-                <form id='Edit' className='input-group' onSubmit={handleSubmit}>
+                <h2 className='edit-h2'>Edit Offer</h2>
+                <form id='Edit' className='edit-input-group' onSubmit={handleSubmit}>
 
 
 
-                    <input className="input-field" type="text" id="type" name="type" value={formData.type} onChange={handleChange} />
+                    <input className="edit-input-field" type="text" id="type" name="type" value={formData.type} onChange={handleChange} />
 
 
 
-                    <input className="input-field" type="text" id="model" name="model" value={formData.model} onChange={handleChange} />
+                    <input className="edit-input-field" type="text" id="model" name="model" value={formData.model} onChange={handleChange} />
 
 
-                    <input className="input-field" type="text" id="stringCount" name="stringCount" value={formData.stringCount} onChange={handleChange} />
+                    <input className="edit-input-field" type="text" id="stringCount" name="stringCount" value={formData.stringCount} onChange={handleChange} />
 
-                    <input className="input-field" type="text" id="fretCount" name="fretCount" value={formData.fretCount} onChange={handleChange} />
+                    <input className="edit-input-field" type="text" id="fretCount" name="fretCount" value={formData.fretCount} onChange={handleChange} />
 
-                    <input className="input-field" type="text" id="price" name="price" value={formData.price} onChange={handleChange} />
+                    <input className="edit-input-field" type="text" id="price" name="price" value={formData.price} onChange={handleChange} />
 
 
-                    <input className="input-field" type="text" id="imgUrl" name="imgUrl" value={formData.imgUrl} onChange={handleChange} />
+                    <input className="edit-input-field" type="text" id="imgUrl" name="imgUrl" value={formData.imgUrl} onChange={handleChange} />
 
-                    <input className="input-field" id="description" name="description" value={formData.description} onChange={handleChange} />
+                    <input className="edit-input-field" id="description" name="description" value={formData.description} onChange={handleChange} />
 
                     <section className='buttons'>
                         <button type="submit" className="edit-btn" >Update</button>
