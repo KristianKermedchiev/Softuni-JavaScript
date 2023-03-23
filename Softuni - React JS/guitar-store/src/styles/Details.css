@@ -1,70 +1,65 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 60vh;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.guitar-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.guitar-image img {
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.guitar-info {
+  width: 50%;
+  margin-left: 1rem;
+}
+
+.guitar-info p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.guitar-description {
+  margin-top: 2rem;
   
-  h2 {
-    margin-top: 20px;
-    text-align: center;
-    color: black;
-  }
-  
-  .guitar-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 80%;
-    margin-top: 20px;
-  }
-  
-  .guitar-image {
-    max-width: 40%;
-    margin-right: 20px;
-  }
-  
-  .guitar-info {
-    max-width: 60%;
-  }
-  
-  .guitar-info p {
-    margin: 5px 0;
-  }
-  
-  .guitar-description {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 80%;
-    margin-top: 20px;
-  }
-  
-  .guitar-description p {
-    max-width: 70%;
-    margin-right: 20px;
-  }
-  
-  .guitar-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    max-width: 30%;
-  }
-  
-  button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #555;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #333;
-  }
-  
+}
+
+.guitar-description-p{
+  margin-left: 130px;
+}
+
+.guitar-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.guitar-buttons button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 60px;
+}
+
+.guitar-buttons button:hover {
+  background-color: #333;
+}
+

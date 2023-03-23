@@ -41,14 +41,16 @@ function Details() {
               <p>Model: {guitar.model}</p>
               <p>Strings: {guitar.stringCount}</p>
               <p>Frets: {guitar.fretCount}</p>
-              <p>Price: {guitar.price}</p>
+              <p>Price: {guitar.price} $</p>
             </div>
           </div>
           <div className="guitar-description">
-            <p>Description: {guitar.description}</p>
+            <p className='guitar-description-p'>Description: {guitar.description}</p>
             <div className="guitar-buttons">
               <button>Edit Offer</button>
               <button>Delete Offer</button>
+              <button>Rate</button>
+              <button>Show Seller's Info</button>
             </div>
           </div>
         </div>
