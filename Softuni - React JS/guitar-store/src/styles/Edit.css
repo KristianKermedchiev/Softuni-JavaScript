@@ -77,7 +77,7 @@ display: flex;
 
 }
 
-.submit-btn{
+.edit-btn{
   width: 40%;
   padding: 15px 30px;
   cursor: pointer;
@@ -96,6 +96,7 @@ display: flex;
   cursor: pointer;
   display: block;
   margin-top: 40px;
+  margin-left: 65px;
   background: linear-gradient(to right, #ff105f,#ffad06);
   border: 0;
   outline: none;
