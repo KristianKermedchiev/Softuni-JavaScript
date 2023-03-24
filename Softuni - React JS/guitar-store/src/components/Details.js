@@ -162,10 +162,10 @@ function Details() {
 
                                 {guitar.liked
                                     ? <button onClick={likeHandler}>
-                                        Dislike
+                                        Remove from favorites
                                     </button>
                                     : <button onClick={likeHandler}>
-                                        Like
+                                        Add to favorites
                                     </button>
                                 }
                                 <button>Show Seller's Info</button>
