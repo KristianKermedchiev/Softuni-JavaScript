@@ -5,6 +5,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import Spinner from './Spinner';
 import '../styles/Details.css';
 import '../styles/Spinner.css';
+import { getAuth } from 'firebase/auth';
 
 
 function Details() {
@@ -13,6 +14,7 @@ function Details() {
     const [guitar, setGuitar] = useState(null);
     const [loading, setLoading] = useState(true);
     const [owner, setOwner] = useState(null);
+    const [currentUser, setCurrentUser] = useState(null);
 
 //GET Guitar
     useEffect(() => {
@@ -58,6 +60,16 @@ function Details() {
     }
   }, [guitar]);
 
+  //GET Current User
+  
+  useEffect(() => {
+    const auth = getAuth(); 
+    const unsubscribe = auth.onAuthStateChanged(user => {
+        setCurrentUser(user); 
+    });
+    return unsubscribe;
+}, []);
+
 
   const handleDelete = async () => {
     const db = getFirestore(app);
@@ -69,8 +81,9 @@ function Details() {
     } catch (error) {
       console.error('Error removing document: ', error);
     }
-
-    await deleteGuitar(id, guitar.ownerId, db);
+    if (owner) {
+        await deleteGuitar(id, owner.owner.id, db);
+      }
   };
 
   async function deleteGuitar(guitarId, ownerId, db) {
@@ -80,8 +93,8 @@ function Details() {
       await updateDoc(ownerRef, {
         posts: arrayRemove(guitarId),
       });
-  
       console.log('Guitar removed from owner successfully!');
+
     } catch (error) {
       console.error('Error removing guitar from owner: ', error);
     }
@@ -110,8 +123,8 @@ function Details() {
             <div className="guitar-description">
                 <p className='guitar-description-p'>Description: {guitar.description}</p>
 
-                {owner && owner.id === guitar && guitar.ownerId 
-                ? <div className="guitar-buttons">
+                {currentUser.uid !== guitar.ownerId ?
+                <div className="guitar-buttons">
                 <Link to={{ pathname: `/catalog/` }}>
                             <button>Back</button>
                         </Link>
@@ -130,6 +143,8 @@ function Details() {
                     <button onClick={handleDelete}>Delete Offer</button>
                 </div>
                 }
+
+                
             </div>
          </div>
     );
