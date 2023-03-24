@@ -185,10 +185,12 @@ function Details() {
                     <p>Strings: {guitar.stringCount}</p>
                     <p>Frets: {guitar.fretCount}</p>
                     <p>Price: {guitar.price} $</p>
-                    <div className="seller-info">
-                    <p className={showSeller ? 'visible' : 'hidden'}>Seller's email: {sellerInfo.email}</p>
-                    <p className={showSeller ? 'visible' : 'hidden'}>Seller's telephone: {sellerInfo.telephone}</p>
-                </div>
+                    {showSeller && (
+                        <>
+                    <p>Seller's email: {sellerInfo.email}</p>
+                    <p>Seller's telephone: {sellerInfo.telephone}</p>
+                    </>
+                    )}
                 </div>
             </div>
 

@@ -68,11 +68,3 @@ p {
 .guitar-buttons button:hover {
   background-color: #333;
 }
-
-.visible {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}

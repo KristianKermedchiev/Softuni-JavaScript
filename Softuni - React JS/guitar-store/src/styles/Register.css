@@ -62,6 +62,7 @@
   padding: 10px 30px;
   cursor: pointer;
   display: block;
+  color: black;
   margin: auto;
   background: linear-gradient(to right, #ff105f,#ffad06);
   border: 0;
@@ -74,4 +75,14 @@
 }
 #register{
   left: 50px;
+}
+
+.auth-error {
+  position: absolute;
+  top: 100px;
+  right: 860px;
+  background-color: red;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
 }

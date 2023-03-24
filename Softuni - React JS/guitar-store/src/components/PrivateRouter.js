@@ -1,8 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './Home';
-// import Login from './Login';
 import Catalog from './Catalog';
-// import Register from './Register';
 import Create from './Create';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';

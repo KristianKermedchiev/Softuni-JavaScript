@@ -3,6 +3,7 @@ import "../styles/Login.css";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../Utils/firebase";
 import { useNavigate } from 'react-router-dom';
+import errorParser from "../Utils/errors";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -24,11 +25,11 @@ function Login() {
         navigate('/catalog');
       })
       .catch((error) => {
-        // const errorCode = error.code;
         const errorMessage = error.message;
-        setError(errorMessage);
+        setError(errorParser(errorMessage));
       });
   };
+  
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -43,7 +44,7 @@ function Login() {
     
     <div className="login">
       {error ? 
-      <div>
+      <div className="auth-error">
         {error}
       </div> :
       null}

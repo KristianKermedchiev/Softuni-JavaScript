@@ -75,3 +75,12 @@
 #register{
     left: 50px;
 }
+
+.auth-error {
+    top: 100px;
+    right: 860px;
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+  }
