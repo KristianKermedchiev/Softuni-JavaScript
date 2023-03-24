@@ -3,12 +3,8 @@ import Home from './Home';
 import Login from './Login';
 import Catalog from './Catalog';
 import Register from './Register';
-// import Create from './Create';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
-// import Profile from './Profile';
-import Details from './Details';
-// import Edit from './Edit';
 
 
 function PublicRouter() {
@@ -20,15 +16,16 @@ function PublicRouter() {
 					<Route path="/catalog" element={<Catalog />} />
 					<Route path="/register" element={<Register />} />
 					<Route path="/login" element={<Login />} />
-					{/* <Route path="/profile" element={<Profile />} /> */}
-					{/* <Route path="/create" element={<Create />} /> */}
+					<Route path="/profile" element={<Login />} />
 					<Route path="/aboutUs" element={<AboutUs />} />
 					<Route path="/contactUs" element={<ContactUs />} />
-					<Route path="/catalog/:id" element={<Details />} />
-					{/* <Route path="/catalog/:id/edit" element={<Edit />} /> */}
+					<Route path="/catalog/:id" element={<Login />} />
+					<Route path="/catalog/:id/edit" element={<Login />} />
+
 				</Routes>
 		
 	);
 }
 
 export default PublicRouter;
+

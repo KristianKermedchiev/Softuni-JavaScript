@@ -18,8 +18,8 @@ function PrivateRouter() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/catalog" element={<Catalog />} />
-					{/* <Route path="/register" element={<Register />} /> */}
-					{/* <Route path="/login" element={<Login />} /> */}
+					<Route path="/register" element={<Home />} />
+					<Route path="/login" element={<Home />} />
 					<Route path="/profile" element={<Profile />} />
 					<Route path="/create" element={<Create />} />
 					<Route path="/aboutUs" element={<AboutUs />} />

@@ -129,7 +129,8 @@ function Details() {
                             <button>Back</button>
                         </Link>
                     
-                    <button>Rate</button>
+                    <button>Like</button>
+                    <button>Dislike</button>
                     <button>Show Seller's Info</button>
                 </div>
                 : <div className="guitar-buttons">
