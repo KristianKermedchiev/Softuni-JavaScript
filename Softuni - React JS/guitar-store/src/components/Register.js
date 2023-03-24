@@ -59,7 +59,8 @@ function Register() {
 					username: '',
 					email: email,
 					profileImg: '',
-					posts: ['']
+					posts: [''],
+					likes: ['']
 				  })
 				const user = userCredential.user;
 				console.log(user);

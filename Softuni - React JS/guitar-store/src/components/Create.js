@@ -90,7 +90,8 @@ function Create() {
               fretCount: fretCount,
               stringCount: stringCount,
               price: price,
-              description: description
+              description: description,
+              liked: [false]
             })
 
             const userRef = doc(db, "Users", ownerId);

@@ -29,9 +29,9 @@ function ContactUs() {
                     <iframe
                         title="Google Maps"
                         src="https://www.google.com/maps/embed/v1/place?q=42.64074483181473, 23.371297331013057&key=AIzaSyCASIsDVvkeFxvhVQv7IAxax7wdKo_dO_Q"
-                        frameborder="0"
+                        frameBorder="0"
                         style={{ border: '0', width: '100%', height: '100%' }}
-                        allowfullscreen
+                        allowFullScreen
                         loading="lazy"
                     ></iframe>
                 </div>

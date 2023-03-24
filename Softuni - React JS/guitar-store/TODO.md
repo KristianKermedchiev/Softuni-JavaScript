@@ -1,4 +1,4 @@
-1. Create Like and Dislike and Show Seller's info
-2. Error handling when logging in and when creating the form
+1. Create Show Seller's info
+2. Error handling when logging in and when creating the form and register.
 3. profile
-4.
+4. fix back button to reflect the current page;
