@@ -153,6 +153,7 @@ function Details() {
                 <p className='guitar-description-p'>Description: {guitar.description}</p>
                 {currentUser ?
                     <div>
+
                         {currentUser.uid !== guitar.ownerId ?
                             <div className="guitar-buttons">
                                 <Link to={{ pathname: `/catalog/` }}>
@@ -181,7 +182,11 @@ function Details() {
                             </div>
                         }
                     </div>
-                    : null
+                    :<div className="guitar-buttons"> 
+                    <Link to={{ pathname: `/catalog/` }}>
+                        <button >Back</button>
+                    </Link>
+                    </div>
                 }
 
             </div>
