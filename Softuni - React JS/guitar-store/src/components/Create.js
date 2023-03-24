@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Create.css';
-import { collection, getFirestore, addDoc } from "firebase/firestore";
+import { collection, getFirestore, addDoc, doc, getDoc, updateDoc } from "firebase/firestore";
 import app from '../Utils/firebase'
 import { useNavigate } from 'react-router-dom';
 import styledComponents from 'styled-components';
@@ -79,21 +79,31 @@ function Create() {
         price,
         description])
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+        const handleSubmit = async (event) => {
+            event.preventDefault();
+          
+            const guitarRef = await addDoc(collection(db, "Guitars"), {
+              ownerId: ownerId,
+              type: type,
+              imgUrl: imgUrl,
+              model: model,
+              fretCount: fretCount,
+              stringCount: stringCount,
+              price: price,
+              description: description
+            })
 
-        await addDoc(collection(db, "Guitars"), {
-            ownerId: ownerId,
-            type: type,
-            imgUrl: imgUrl,
-            model: model,
-            fretCount: fretCount,
-            stringCount: stringCount,
-            price: price,
-            description: description
-        })
-        navigate('/catalog')
-    };
+            const userRef = doc(db, "Users", ownerId);
+            const userDoc = await getDoc(userRef);
+
+            if (userDoc.exists()) {
+              const userData = userDoc.data();
+              const updatedPosts = [...userData.posts, guitarRef.id];
+              await updateDoc(userRef, { posts: updatedPosts });
+            }
+          
+            navigate('/catalog');
+          };
 
     return (
         <div className='create'>

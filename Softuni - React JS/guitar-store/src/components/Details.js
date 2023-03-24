@@ -1,5 +1,5 @@
 import app from '../Utils/firebase';
-import { collection, doc, deleteDoc, getDoc, getFirestore } from 'firebase/firestore';
+import { collection, doc, deleteDoc, getDoc, getFirestore, updateDoc, arrayRemove } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Spinner from './Spinner';
@@ -59,20 +59,33 @@ function Details() {
   }, [guitar]);
 
 
-    const handleDelete = async () => {
-        const db = getFirestore(app);
-        const guitarRef = doc(collection(db, 'Guitars'), id);
-        
+  const handleDelete = async () => {
+    const db = getFirestore(app);
+    const guitarRef = doc(collection(db, 'Guitars'), id);
+    try {
+      await deleteDoc(guitarRef);
+      console.log('Document successfully deleted!');
+      navigate('/catalog');
+    } catch (error) {
+      console.error('Error removing document: ', error);
+    }
 
+    await deleteGuitar(id, guitar.ownerId, db);
+  };
 
-        try {
-            await deleteDoc(guitarRef);
-            console.log('Document successfully deleted!');
-            navigate('/catalog');
-        } catch (error) {
-            console.error('Error removing document: ', error);
-        }
-    };
+  async function deleteGuitar(guitarId, ownerId, db) {
+    const ownerRef = doc(collection(db, 'Users'), ownerId);
+  
+    try {
+      await updateDoc(ownerRef, {
+        posts: arrayRemove(guitarId),
+      });
+  
+      console.log('Guitar removed from owner successfully!');
+    } catch (error) {
+      console.error('Error removing guitar from owner: ', error);
+    }
+  }
 
     if (loading || !guitar) {
         return <Spinner />;
@@ -120,6 +133,7 @@ function Details() {
             </div>
          </div>
     );
+   
 };
 
 export default Details;
