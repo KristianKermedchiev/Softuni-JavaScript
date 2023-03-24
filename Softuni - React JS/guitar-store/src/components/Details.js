@@ -15,6 +15,8 @@ function Details() {
     const [loading, setLoading] = useState(true);
     const [owner, setOwner] = useState(null);
     const [currentUser, setCurrentUser] = useState(null);
+    const [showSeller, setShowSeller] = useState(false);
+    const [sellerInfo, setSellerInfo] = useState(null);
 
     //GET Guitar
     useEffect(() => {
@@ -70,6 +72,7 @@ function Details() {
         return unsubscribe;
     }, []);
 
+    // Handle Delete
 
     const handleDelete = async () => {
         const db = getFirestore(app);
@@ -86,6 +89,10 @@ function Details() {
         }
     };
 
+
+    // Delete Guitar record from user's collection
+
+
     async function deleteGuitar(guitarId, ownerId, db) {
         const ownerRef = doc(collection(db, 'Users'), ownerId);
 
@@ -99,6 +106,8 @@ function Details() {
             console.error('Error removing guitar from owner: ', error);
         }
     }
+
+    // Like Handler
 
     async function likeHandler() {
         const db = getFirestore(app);
@@ -126,9 +135,39 @@ function Details() {
         } catch (error) {
             console.error('Error liking guitar: ', error);
         }
+    };
+
+    // Show seller Handler
+
+    function showSellerInfo() {
+        const db = getFirestore(app);
+        const ownerRef = doc(collection(db, 'Users'), guitar.ownerId);
+
+        getDoc(ownerRef)
+            .then((doc) => {
+                if (doc.exists()) {
+                    setSellerInfo(doc.data());
+                    setShowSeller(true);
+                } else {
+                    console.log('No such document!');
+                }
+            })
+            .catch((error) => {
+                console.log('Error getting document:', error);
+            });
+    };
+
+    function hideSellerInfo() {
+        setShowSeller(false);
     }
 
-
+    function toggleSellerInfo() {
+        if (showSeller) {
+            hideSellerInfo();
+        } else {
+            showSellerInfo();
+        }
+    }
     if (loading || !guitar) {
         return <Spinner />;
     }
@@ -146,6 +185,10 @@ function Details() {
                     <p>Strings: {guitar.stringCount}</p>
                     <p>Frets: {guitar.fretCount}</p>
                     <p>Price: {guitar.price} $</p>
+                    <div className="seller-info">
+                    <p className={showSeller ? 'visible' : 'hidden'}>Seller's email: {sellerInfo.email}</p>
+                    <p className={showSeller ? 'visible' : 'hidden'}>Seller's telephone: {sellerInfo.telephone}</p>
+                </div>
                 </div>
             </div>
 
@@ -168,7 +211,12 @@ function Details() {
                                         Add to favorites
                                     </button>
                                 }
-                                <button>Show Seller's Info</button>
+                                <button onClick={toggleSellerInfo}>
+                                    {showSeller ? 'Hide Seller Info' : 'Show Seller Info'}
+                                </button>
+
+                                
+
                             </div>
                             : <div className="guitar-buttons">
                                 <Link to={{ pathname: `/catalog/` }}>
@@ -182,10 +230,10 @@ function Details() {
                             </div>
                         }
                     </div>
-                    :<div className="guitar-buttons"> 
-                    <Link to={{ pathname: `/catalog/` }}>
-                        <button >Back</button>
-                    </Link>
+                    : <div className="guitar-buttons">
+                        <Link to={{ pathname: `/catalog/` }}>
+                            <button >Back</button>
+                        </Link>
                     </div>
                 }
 

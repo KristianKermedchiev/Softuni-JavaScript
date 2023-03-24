@@ -4,6 +4,10 @@
   padding: 20px;
 }
 
+p {
+  margin: 27px;
+}
+
 .model{
   color: black;
   font-size: 2rem;
@@ -28,6 +32,7 @@
   width: 50%;
   margin-left: 1rem;
 }
+
 
 .guitar-info p {
   font-size: 1.2rem;
@@ -64,3 +69,10 @@
   background-color: #333;
 }
 
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
