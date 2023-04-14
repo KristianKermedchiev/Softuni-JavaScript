@@ -30,4 +30,4 @@ In this course we covered the following topics:
 
 - Workshop: Advanced Techniques - Part 2
 
-This course was graded based on a final project, which is present in the branch 'Guitar-Store';
+This course was graded based on a final project, which is present in the repository 'Guitar-Store';
