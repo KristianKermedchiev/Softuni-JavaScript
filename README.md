@@ -12,4 +12,8 @@ Softuni JavaScript Advanced Module - 12SEP2022 - 22OCT2022.
 
 Softuni JavaScript Applications Module - 25OCT2022 - 03DEC2022.
 
+Softuni JavaScript JS Back-End Module - 9JAN2023 - 15FEB2023.
+
+Softuni JavaScript ReactJS Module - 20FEB - 9APR2023
+
 More information about each topic course will be present in its respective folder.
