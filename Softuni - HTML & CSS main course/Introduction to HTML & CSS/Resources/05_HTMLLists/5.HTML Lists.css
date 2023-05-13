@@ -1,0 +1,15 @@
+.roman {
+    list-style-type: upper-roman;
+}
+
+.alpha {
+    list-style-type: lower-alpha;
+}
+
+.white-dot{
+    list-style-type: circle;
+}
+
+.black-dot {
+    list-style-type: disc;
+}
