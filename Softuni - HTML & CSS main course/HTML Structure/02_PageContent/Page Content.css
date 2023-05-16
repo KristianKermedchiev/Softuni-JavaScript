@@ -1,0 +1,22 @@
+h1 {
+    size: 28px;
+}
+
+.first {
+    font-style: italic;
+    text-size-adjust: 12px;
+}
+
+.second {
+    size: 24px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #CCCCCC;
+}
+
+section{
+    margin-left: 20px;
+}
