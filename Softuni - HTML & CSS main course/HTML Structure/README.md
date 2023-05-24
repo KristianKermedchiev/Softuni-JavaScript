@@ -2,7 +2,7 @@
 
 In this lecture we covered the following topics:
 
-Introduction to HTML & CSS: 
+HTML Structure: 
 
 • Semantic HTML;
 
