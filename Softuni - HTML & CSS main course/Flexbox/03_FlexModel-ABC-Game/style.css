@@ -1,0 +1,26 @@
+html {
+    font: 20px/1.5 Helvetica, sans-serif;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 15vw;
+    height: 22rem;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+}
+
+span {
+    display: block;
+    flex: 0 0 auto;
+    width: 5em;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.evelen {
+    order: 1;
+}
+

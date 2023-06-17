@@ -1,0 +1,29 @@
+html {
+    font: 14px/1.5 Helvetica, sans-serif;
+}
+
+body {
+    font: inherit;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    line-height: 1.2;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 70vw;
+    margin: 5em auto;
+    gap: 3em;
+}
+
+section article {
+    flex: 1 1 15em;
+}
+
+
