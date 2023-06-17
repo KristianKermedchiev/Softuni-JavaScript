@@ -7,29 +7,62 @@
 div, section {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 body {
-    border: 2px solid red;
+    padding: 2em;
+    font: 10px/1.5em Verdana, sans-serif;
 }
 
 .container {
     max-width: 65vw;
-    border: 2px solid blue;
-
+    align-items: stretch;
+    margin: 2em auto;
 }
 
+.week {
+    flex-wrap: wrap;
+}
+
+span {
+    display: block;
+    padding: 1em 1em;
+    flex-grow: 1;
+    border: 1px solid #000;
+    padding-bottom: 3em;
+    text-align: center;
+}
+
+.week span:nth-child(9),
 .week span:nth-child(1){
     flex-basis: 100%;
 }
 
-.notes {
-    flex-direction: column;
+.week span:nth-child(7){
+    order: 1;
 }
 
-span {
-    border: 1px solid #000;
+.week span:nth-child(8){
+order: 2;
+}
+
+.week span:last-child,
+.week span:nth-child(1),
+.week span:nth-child(2),
+.week span:nth-child(3),
+.week span:nth-child(4),
+.week span:nth-child(5),
+.week span:nth-child(6){
+    border-bottom: none;
+}
+
+.notes {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.notes span {
+    flex: 1 0 50%;
 }
 
 

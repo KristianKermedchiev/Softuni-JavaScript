@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    padding: 2em;
+    background: #eee;
+}
+
+.gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.gallery li {
+    flex: 0 0 15em;
+    display: flex;
+    align-items: center;
+    border: 0.5em solid black;
+    background: white;
+    padding: 0.5em;
+    border-radius: 0.15em;
+    box-shadow: 
+        0 0 0.5em 0 rgba(0, 0, 0, 0.4) inset,
+        0 0 1em 0 rgba(0, 0, 0, 0.4);
+}
+
+.gallery li img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
