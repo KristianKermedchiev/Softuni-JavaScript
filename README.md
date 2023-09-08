@@ -18,4 +18,6 @@ Softuni JavaScript ReactJS Module - 20FEB - 9APR2023
 
 Softuni HTML & CSS Module - 11MAY - 18JUN2023.
 
+Softuni Angular Course - 20JUN - 12AUG2023.
+
 More information about each topic course will be present in its respective folder.
