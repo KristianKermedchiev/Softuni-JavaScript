@@ -12,19 +12,11 @@ In this course we covered the following topics:
 
 - CSS & Typography
 
-- Exercise: HTML & CSS
-
 - CSS Box Model
-
-- Exercise: CSS Box Model
 
 - Flexbox
 
-- Exercise: Flexbox
-
 - Position & Grid
-
-- Exercise: Position & Grid
 
 - Media Queries
 
